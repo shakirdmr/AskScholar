@@ -30,6 +30,14 @@ export default defineConfig({
       events: "events/",
       util: "util/"
     }
+  },
+  server: {
+    host: true,           // Allows LAN access
+    port: 5173,           // (optional) set your preferred port
+    // allowedHosts: 'all'   // ✅ Allow all domains, including ngrok
+   allowedHosts: [
+      '33ca06f0dbbe.ngrok-free.app' // <— Replace with your actual ngrok host
+    ]
   }
 });
 
