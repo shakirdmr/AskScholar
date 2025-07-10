@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+
+
+div{
+    border: 1px dotted #44ec26;
+}

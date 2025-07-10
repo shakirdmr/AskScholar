@@ -1,0 +1,27 @@
+# 1. Go to your project root
+cd /Users/alif/Desktop/REACT/CO-PILOT_TUTORIAL_VIDEO_CALL
+
+# 2. Remove the old frontend folder (if you want a clean start)
+rm -rf frontend
+
+# 3. Create a new Vite + React + TypeScript project
+npm create vite@latest frontend -- --template react-ts
+
+# 4. Go into the new frontend folder
+cd frontend
+
+# 5. Install dependencies
+npm install
+
+# 6. Install video call dependencies
+npm install simple-peer socket.io-client
+
+# 7. (Optional) Install Tailwind CSS for styling
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+# 8. Replace src/index.css with Tailwind imports
+echo -e "@tailwind base;\n@tailwind components;\n@tailwind utilities;" > src/index.css
+
+# 9. Start the development server
+npm run dev
