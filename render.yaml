@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: web-rtc-backend
+    env: node
+    plan: free
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: PORT
+        value: 10000  # or any port your server uses
+
+  - type: web
+    name: web-rtc-frontend
+    env: static
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: client/dist
